@@ -1,6 +1,0 @@
-Flask
-lazyme
-numpy
-slackclient
-sqlalchemy
-watchdog

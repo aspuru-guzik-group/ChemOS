@@ -48,7 +48,7 @@ _DEFAULT_SETTINGS = {'algorithm': {'name': _ALGORITHM_NAME,
 					 'communicator': {'type': 'slack'},
 
 
-					 'experiments': [{'name': 'maximize HPLC peak area', 
+					 'experiments': [{'name': 'experiment_name', 
 					 				  'variables':  [{'name': 'param0', 'type': 'float', 'low': 0.0, 'high': 1.0, 'size': 1},
 					 				  			     {'name': 'param1', 'type': 'float', 'low': 0.0, 'high': 1.0, 'size': 1},
 												 	 {'name': 'param2', 'type': 'float', 'low': 0.0, 'high': 1.0, 'size': 1},
@@ -56,10 +56,10 @@ _DEFAULT_SETTINGS = {'algorithm': {'name': _ALGORITHM_NAME,
 												 	 {'name': 'param4', 'type': 'float', 'low': 0.0, 'high': 1.0, 'size': 1},
 												 	 {'name': 'param5', 'type': 'float', 'low': 0.0, 'high': 1.0, 'size': 1}],
 
-									  'objectives': [{'name': 'peak_area',      'operation': 'std_rel', 'hierarchy': 0, 'type': 'minimum', 'tolerance': 0.2},
-									  				 {'name': 'peak_area',      'operation': 'average', 'hierarchy': 1, 'type': 'maximum', 'tolerance': 0.5},
-									  				 {'name': 'sample_volume',  'operation': 'average', 'hierarchy': 2, 'type': 'minimum', 'tolerance': 0.2},
-									  				 {'name': 'execution_time', 'operation': 'average', 'hierarchy': 3, 'type': 'minimum', 'tolerance': 0.5}],
+									  'objectives': [{'name': 'obj_0', 'operation': 'std_rel', 'hierarchy': 0, 'type': 'minimum', 'tolerance': 0.2},
+									  				 {'name': 'obj_0', 'operation': 'average', 'hierarchy': 1, 'type': 'maximum', 'tolerance': 0.5},
+									  				 {'name': 'obj_1', 'operation': 'average', 'hierarchy': 2, 'type': 'minimum', 'tolerance': 0.2},
+									  				 {'name': 'obj_2', 'operation': 'average', 'hierarchy': 3, 'type': 'minimum', 'tolerance': 0.5}],
 
 					 				  'repetitions': 3,
 									  'description': 'This experiment aims to mix available colors to create a solution of a defined target color'}],
