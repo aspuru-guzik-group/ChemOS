@@ -1,3 +1,0 @@
-model_checkpoint_path: "bnn.ckpt"
-all_model_checkpoint_paths: "tmp_bnn.ckpt"
-all_model_checkpoint_paths: "bnn.ckpt"
