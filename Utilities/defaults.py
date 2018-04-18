@@ -62,16 +62,12 @@ _DEFAULT_SETTINGS = {'algorithm': {'name': _ALGORITHM_NAME,
 									  				 {'name': 'obj_2', 'operation': 'average', 'hierarchy': 3, 'type': 'minimum', 'tolerance': 0.5}],
 
 					 				  'repetitions': 3,
-									  'description': 'This experiment aims to mix available colors to create a solution of a defined target color'}],
+									  'description': 'description of the experiment'}],
 
 					 'bots': [{'name': 'default_bot', 
 					 		   'parameters': ['param0', 'param1', 'param2', 'param3', 'param4', 'param5'],
-							   'communication': {'dump_path': '/home/chemos/Dropbox/chemos/input', 'pick_up_path': '/home/chemos/Dropbox/chemos/output',
-							   					 'status_file': '/home/chemos/Dropbox/chemos/ChemOS_status.pkl',
-#							   'communication': {'dump_path': '/home/chemos/Dropbox/chemos/input', 'pick_up_path': '/home/chemos/Dropbox/chemos/output',
-#							   					 'status_file': '/home/chemos/Dropbox/chemos/ChemOS_status.pkl',
-#					 		   'communication': {'dump_path': '/home/chemos/Dropbox/chemos/input', 'pick_up_path': '/home/chemos/Dropbox/chemos/input', 
-#					 		   					 'username': 'john_doe', 'host': '192.168.0.1'}}]
+							   'communication': {'dump_path': 'input', 'pick_up_path': 'output',
+							   					 'status_file': 'chemos/ChemOS_status.pkl',
 												 }}]			 
 
 					 												   }
