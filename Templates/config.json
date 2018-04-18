@@ -1,0 +1,28 @@
+{
+    "language"        : "PYTHON",
+    "main-file"       : "main_file.py",
+    "grid_seed"       : 691,
+    "experiment-name" : "dejong",
+    "likelihood"      : "NOISELESS",
+    "acquisition"     : "PES",
+    "resources": {
+		"my-machine": {
+			"max_finished_jobs": 300
+			}
+		},
+    "variables" : {
+        "x" : {
+            "type" : "FLOAT",
+            "size" : 1,
+            "min"  : 0,
+            "max"  : 1
+        },
+        "y" : {
+            "type" : "FLOAT",
+            "size" : 1,
+            "min"  : 0,
+            "max"  : 1
+        }
+    }
+}
+

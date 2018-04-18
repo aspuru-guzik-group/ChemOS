@@ -1,0 +1,17 @@
+{
+    "language"        : "PYTHON",
+    "main-file"       : "main_file.py",
+    "grid_seed"       : 0,
+    "experiment-name" : "main",
+    "likelihood"      : "NOISELESS",
+	"acquisition"     : "PES",
+    "resources": {
+		"my-machine": {
+			"max_finished_jobs": 300,
+			"max-concurrent": {@BATCH_SIZE}
+			}
+		},
+    "variables" : {{@VARIABLE_LIST}}
+    
+}
+

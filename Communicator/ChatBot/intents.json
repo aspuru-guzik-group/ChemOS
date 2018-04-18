@@ -1,0 +1,38 @@
+{"intents": [
+		{"tag": "greeting",
+		 "patterns": ["Hi", "Hello", "How are you", "Hello there", "Good day", "Good morning", "Good afternoon", "Good evening"],
+		 "responses": ["Hello, how are you?", "Hi there, how can I help you?"],
+		 "context_set": ""
+		},
+		{"tag": "thanks",
+		 "patterns": ["Thanks", "Thank you"],
+		 "responses": ["You're very welcome!"]
+		},
+		{"tag": "start",
+			"patterns": ["start", "begin", "launch"],
+			"responses": ["Launching ChemOS for {@EXP_PROCED}"],
+			"context_filter": ""
+		},
+		{"tag": "restart",
+			"patterns": ["restart"],
+			"responses": ["Restarting ChemOS for {@EXP_PROCED}"],
+			"context_filter": ""
+		},
+		{"tag": "stop",
+			"patterns": ["stop"],
+			"responses": ["Stopping ChemOS for {@EXP_PROCED}"],
+			"context_filter": ""
+		},
+		{"tag": "progress_request",
+			"patterns": ["progress", "how far"],
+			"responses": ["Let me collect the progress on {@EXP_PROCED}"],
+			"context_filter": ""
+		},
+		{"tag": "description_request",
+		    "patterns": ["what does do ?", "what is goal"], 
+			"responses": ["{@EXP_DESCRIPTION}"],
+			"context_filter": ""
+		}
+
+	]
+}

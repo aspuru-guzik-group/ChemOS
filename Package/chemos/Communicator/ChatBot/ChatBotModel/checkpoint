@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/chemos/ChemOS/ChemOS_N9_colors/Communicator/ChatBot/ChatBotModel/model.tflearn"
+all_model_checkpoint_paths: "/home/chemos/ChemOS/ChemOS_N9_colors/Communicator/ChatBot/ChatBotModel/model.tflearn"

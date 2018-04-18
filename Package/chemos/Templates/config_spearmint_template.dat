@@ -1,0 +1,10 @@
+{
+	"general": {
+		"batches_per_round": {@NUM_BATCHES},
+		"batch_size": {@BATCH_SIZE},
+		"max_evals": 1,
+		"submission_log": "submitted_sets.pkl",
+		"evaluation_log": "evaluated_sets.pkl"
+	},
+	"variables": [{@VARIABLE_LIST}]
+}

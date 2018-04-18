@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/flo/ChemOS/Repo/ChemOS_master/Communicator/ChatBot/ChatBotModel/model.tflearn"
+all_model_checkpoint_paths: "/home/flo/ChemOS/Repo/ChemOS_master/Communicator/ChatBot/ChatBotModel/model.tflearn"

@@ -1,0 +1,76 @@
+{"intents": [
+		{"tag": "greeting",
+		 "patterns": ["Hi", "Hello", "How are you", "Hello there", "Good day", "Good morning", "Good afternoon", "Good evening"],
+		 "responses": ["Hello, how are you?", "Hi there, how can I help you?"],
+		 "context_set": ""
+		},
+		{"tag": "thanks",
+		 "patterns": ["Thanks", "Thank you"],
+		 "responses": ["You're very welcome!"]
+		},
+		{"tag": "menu",
+		 "patterns": ["What do you offer?", "What do you have?", "Which drinks?", "What is on the menu?", "What do you do?", "What can you do?", "What do you mix?", "What can you mix?"],
+		 "responses": ["I can make you a #tequilasunrise", "I can mix you a #tequilasunrise"]
+		},
+		{"tag": "request",
+		 "patterns": ["Hi", "Hello", "Can I get", "Make me a", "Can you prepare", "Make me", "Prepare a", "Pour me"],
+		 "responses": ["Excellent choice! Your {@DRINK_NAME} is coming right up!", "Sure thing. Your {@DRINK_NAME} will be ready in a few seconds"]
+		},
+		{"tag": "pick_up",
+		 "patterns": ["When is the drink ready?", "When is it ready", "Can I pick it up?", "How long ?"],
+		 "responses": ["Your drink is ready for pick up. Let me know how you like it!"],
+		 "context_set": "feedback"
+		},
+		{"tag": "start",
+			"patterns": ["start", "begin", "launch"],
+			"responses": ["Launching ChemOS for {@EXP_PROCED}"],
+			"context_filter": ""
+		},
+		{"tag": "restart",
+			"patterns": ["restart"],
+			"responses": ["Restarting ChemOS for {@EXP_PROCED}"],
+			"context_filter": ""
+		},
+		{"tag": "stop",
+			"patterns": ["stop"],
+			"responses": ["Stopping ChemOS for {@EXP_PROCED}"],
+			"context_filter": ""
+		},
+		{"tag": "description_request",
+		    "patterns": ["what does do ?", "what is goal"], 
+			"responses": ["{@EXP_DESCRIPTION}"],
+			"context_filter": ""
+		},
+
+        {"tag": "ready",
+           "patterns": ["wwwwwwwwwww"],
+           "responses": ["Your {@DRINK_NAME} is ready for pick up."],
+           "context_filter": ""
+		},
+        {"tag": "one_star",
+           "patterns": ["Hi", "Hello", "drink", "1", "one", "*", "+", "star"],
+           "responses": ["Thanks for your feedback. I hope to make it better next time!"],
+           "context_filter": "feedback"
+        },
+        {"tag": "two_star",
+           "patterns": ["Hi", "Hello", "drink", "2", "two", "*", "**", "++", "star"],
+           "responses": ["Thanks for your feedback. I hope to make it better next time!"],
+           "context_filter": "feedback"
+		},
+        {"tag": "three_star",
+           "patterns": ["Hi", "Hello", "drink", "3", "three", "*", "***", "+++", "star"],
+           "responses": ["Thanks for your feedback."],
+           "context_filter": "feedback"
+		},
+        {"tag": "four_star",
+           "patterns": ["Hi", "Hello", "drink", "4", "four", "*", "****", "++++", "star"],
+           "responses": ["Thanks for your feedback. I'm glad you liked it!"],
+           "context_filter": "feedback"
+		},
+        {"tag": "five_star",
+           "patterns": ["Hi", "Hello", "drink", "5", "five", "*", "*****", "+++++", "star"],
+           "responses": ["Thanks for your feedback. I'm glad you liked it!"],
+           "context_filter": "feedback"
+		}
+	]
+}

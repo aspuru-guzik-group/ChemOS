@@ -1,0 +1,13 @@
+{
+	"general": {
+		"num_batches": {@NUM_BATCHES},
+		"batch_size": {@BATCH_SIZE},
+		"parallel_evaluations": "False",
+		"max_evals": 1,
+		"submission_log": "submitted_sets.pkl",
+		"evaluation_log": "evaluated_sets.pkl",
+		"softness": 0.001
+	},
+	"variables": [{@VARIABLE_LIST}],
+	"objectives": [{@OBJECTIVE_LIST}]
+}
