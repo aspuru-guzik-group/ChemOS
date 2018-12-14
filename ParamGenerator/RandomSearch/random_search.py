@@ -6,7 +6,7 @@ __author__ = 'Florian Hase'
 
 import numpy as np 
 
-from Utils.utils import ParserJSON, Printer
+from Utilities.misc import ParserJSON, Printer
 
 #============================================================================
 
