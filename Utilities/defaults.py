@@ -46,6 +46,7 @@ _DEFAULT_SETTINGS = {'algorithm': {'name': _ALGORITHM_NAME,
 
 					 'communicator': {'type': 'slack', 'port': <<PORT>>, 'channel_id': <<CHANNEL_ID>>, 'bot_id': <<BOT_ID>>},
 
+
 					 'experiments': [{'name': 'experiment', 
 					 				  'variables':  [{'name': 'param0', 'type': 'float', 'low': 0.0, 'high': 1.0, 'size': 1},
 					 				  			     {'name': 'param1', 'type': 'float', 'low': 0.0, 'high': 1.0, 'size': 1},

@@ -8,10 +8,11 @@ import os
 import numpy as np
 
 from ParamGenerator.RandomSearch.random_search import RandomSearcher
+from Utilities.misc import Replacable
 
 #============================================================================
 
-class RandomsearchWrapper(object):
+class RandomsearchWrapper(Replacable):
 
 	HOME     = os.getcwd() if not 'RANDOM_HOME' in os.environ.keys() else os.environ['RANDOM_HOME']
 	TEMPLATE = open('%s/Templates/config_random_template.dat' % HOME, 'r').read()

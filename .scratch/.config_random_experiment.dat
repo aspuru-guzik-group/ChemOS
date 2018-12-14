@@ -2,7 +2,7 @@
 	"general": {
 		"batches_per_round": 1,
 		"batch_size": 2,
-		"random_seed": 917061602,
+		"random_seed": 621604140,
 		"max_evals": 1,
 		"submission_log": "submitted_sets.pkl",
 		"evaluation_log": "evaluated_sets.pkl"
