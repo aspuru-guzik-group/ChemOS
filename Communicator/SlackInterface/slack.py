@@ -16,8 +16,9 @@ from Utilities.file_logger import FileLogger
 
 class SlackCommunicator(object):
 
-	def __init__(self, account_details):
+	def __init__(self, settings, account_details):
 
+		self.settings        = settings
 		self.account_details = account_details
 		self.client          = SlackClient(os.environ.get('SLACK_TOKEN'))
 
