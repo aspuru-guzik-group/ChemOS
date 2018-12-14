@@ -8,7 +8,7 @@ import os
 import numpy as np
 
 from ParamGenerator.RandomSearch.random_search import RandomSearcher
-from Utils.utils import Replacable
+from Utilities.misc import Replacable
 
 #============================================================================
 
