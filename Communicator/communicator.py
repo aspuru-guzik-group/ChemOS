@@ -153,7 +153,7 @@ class Communicator(Printer, SlackCommunicator):
 		elif classification == 'progress_request':
 				
 			# find experimental procedure
-			exp_proced   = self._process_request(body, 'progress')
+			exp_proced   = self._process_request(author, body, 'progress')
 			# confirm receipt of analysis request
 			response     = self.bot.response(body)
 			replace_dict = {'{@EXP_PROCED}': exp_proced}
