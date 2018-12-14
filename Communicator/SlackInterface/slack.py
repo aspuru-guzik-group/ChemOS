@@ -16,9 +16,9 @@ from Utilities.file_logger import FileLogger
 
 class SlackCommunicator(object):
 
-	def __init__(self, settings, account_details):
+	def __init__(self, slack_settings, account_details):
 
-		self.settings        = settings
+		self.slack_settings  = slack_settings
 		self.account_details = account_details
 		self.client          = SlackClient(os.environ.get('SLACK_TOKEN'))
 
@@ -51,7 +51,7 @@ class SlackCommunicator(object):
 		self.file_logger.start()
 		# pickle settings
 		template = open('Communicator/SlackInterface/run_slack_stream.py', 'r').read()
-		replace_dict = {'{@PORT}': self.settings['port'], '{@CHANNEL_ID}': self.settings['channel_id']}
+		replace_dict = {'{@PORT}': self.slack_settings['port'], '{@CHANNEL_ID}': self.slack_settings['channel_id']}
 		for key, item in replace_dict.items():
 			template = template.replace(str(key), str(item))
 		content = open('Communicator/SlackInterface/run_slack_stream.py', 'w')
