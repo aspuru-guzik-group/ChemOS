@@ -49,6 +49,14 @@ class SlackCommunicator(object):
 		self._process_message = process_message
 		self.file_logger = FileLogger(action = self._parse_message, path = os.getcwd())
 		self.file_logger.start()
+		# pickle settings
+		template = open('Communicator/SlackInterface/run_slack_stream.py', 'r').read()
+		replace_dict = {'{@PORT}': self.settings['port'], '{@CHANNEL_ID}': self.settings['channel_id']}
+		for key, item in replace_dict.items():
+			template = template.replace(str(key), str(item))
+		content = open('Communicator/SlackInterface/run_slack_stream.py', 'w')
+		content.write(template)
+		content.close()
 		subprocess.call('python Communicator/SlackInterface/run_slack_stream.py', shell = True)
 
 
