@@ -1,0 +1,13 @@
+{
+	"general": {
+		"num_batches": 1,
+		"batch_size": 2,
+		"parallel_evaluations": "False",
+		"max_evals": 1,
+		"submission_log": "submitted_sets.pkl",
+		"evaluation_log": "evaluated_sets.pkl",
+		"softness": 0.001
+	},
+	"variables": [{"param0": { "low": 0.0,  "high": 1.0,  "type": "float",  "size": 1} }, {"param1": { "low": 0.0,  "high": 1.0,  "type": "float",  "size": 1} }, {"param2": { "low": 0.0,  "high": 1.0,  "type": "float",  "size": 1} }, {"param3": { "low": 0.0,  "high": 1.0,  "type": "float",  "size": 1} }, {"param4": { "low": 0.0,  "high": 1.0,  "type": "float",  "size": 1} }, {"param5": { "low": 0.0,  "high": 1.0,  "type": "float",  "size": 1} }],
+	"objectives": [{"obj_0_std_rel": {"hierarchy": 0, "type": "minimum", "tolerance": 0.2} }, {"obj_0_average": {"hierarchy": 1, "type": "minimum", "tolerance": 0.5} }, {"obj_1_average": {"hierarchy": 2, "type": "minimum", "tolerance": 0.2} }, {"obj_2_average": {"hierarchy": 3, "type": "minimum", "tolerance": 0.5} }]
+}

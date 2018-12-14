@@ -1,0 +1,11 @@
+{
+	"general": {
+		"batches_per_round": 1,
+		"batch_size": 2,
+		"random_seed": 917061602,
+		"max_evals": 1,
+		"submission_log": "submitted_sets.pkl",
+		"evaluation_log": "evaluated_sets.pkl"
+	},
+	"variables": [{"param0": { "low": 0.0,  "high": 1.0,  "type": "float",  "size": 1} }, {"param1": { "low": 0.0,  "high": 1.0,  "type": "float",  "size": 1} }, {"param2": { "low": 0.0,  "high": 1.0,  "type": "float",  "size": 1} }, {"param3": { "low": 0.0,  "high": 1.0,  "type": "float",  "size": 1} }, {"param4": { "low": 0.0,  "high": 1.0,  "type": "float",  "size": 1} }, {"param5": { "low": 0.0,  "high": 1.0,  "type": "float",  "size": 1} }]
+}

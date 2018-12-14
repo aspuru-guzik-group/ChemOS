@@ -20,6 +20,7 @@ class Communicator(Printer, SlackCommunicator):
 		Printer.__init__(self, 'COMMUNICATOR', color = 'grey')
 		self.settings = settings
 		self.account_details = self.settings['account_details']
+
 		self.account_details['exp_names'] = [exp['name'] for exp in self.settings['experiments']]
 		self.verbose  = verbose
 		self.option   = self.settings['communicator']['type']
@@ -45,7 +46,7 @@ class Communicator(Printer, SlackCommunicator):
 		elif self.option == 'slack':
 			self._print('setting up Slack streaming')
 			self.bot = Bot()
-			SlackCommunicator.__init__(self, self.account_details)
+			SlackCommunicator.__init__(self, self.settings['communicator'], self.account_details)
 
 		else:
 			self._print('did not understand option: %s' % self.option)
@@ -66,6 +67,10 @@ class Communicator(Printer, SlackCommunicator):
 		# just store new requests locally as attributes to be picked up by chemOS
 
 		exp_name = self._find_experimental_procedure(request.lower())
+
+#		print('REQUEST', request)
+#		print('EXP_NAME', exp_name)
+
 		if not exp_name:
 			self._print('could not find request %s' % request)
 			message = 'Could not find valid experiment identifier in message: {@FOUND_IDENT}.\nPlease choose your identifier from: {@EXP_IDENTS}'
@@ -153,7 +158,7 @@ class Communicator(Printer, SlackCommunicator):
 		elif classification == 'progress_request':
 				
 			# find experimental procedure
-			exp_proced   = self._process_request(body, 'progress')
+			exp_proced   = self._process_request(author, body, 'progress')
 			# confirm receipt of analysis request
 			response     = self.bot.response(body)
 			replace_dict = {'{@EXP_PROCED}': exp_proced}
@@ -188,7 +193,7 @@ class Communicator(Printer, SlackCommunicator):
 	def send(self, kind, request_details, file_names = None):
 		
 		if kind == 'analysis':
-			message = self.bot.response('')
+			message = None
 			self._send_message(request_details['author'], message, file_names = file_names)
 
 
@@ -212,7 +217,6 @@ class Communicator(Printer, SlackCommunicator):
 
 
 	def stream(self):
-		print('starting stream')
 		self._stream(self.process_message)
 
 

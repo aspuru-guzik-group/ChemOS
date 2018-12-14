@@ -25,7 +25,7 @@ class BayesianNeuralNetwork(VarDictParser):
 
 
 
-	def __init__(self, var_dicts, observed_params, observed_losses, batch_size, backend = 'pymc3', model_details = None):
+	def __init__(self, var_dicts, observed_params, observed_losses, batch_size, backend = 'edward', model_details = None):
 
 		VarDictParser.__init__(self, var_dicts)
 

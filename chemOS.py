@@ -204,6 +204,7 @@ class ChemOS(Printer):
 			# we need to notify the user 
 			self.communicator.send(kind = 'analysis', request_details = analyzed['request_details'], file_names = [analyzed['progress_file']])
 
+		print('*****************************************')
 
 
 	def run(self, max_iter = 10**12):

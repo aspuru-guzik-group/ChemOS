@@ -17,8 +17,8 @@ _DB_RESULTS_TYPE  = 'sqlite'
 _DB_FEEDBACK_PATH = '%s/Experiments/Databases/feedback.db' % _HOME
 _DB_FEEDBACK_TYPE = 'sqlite'
 
-_ALGORITHM_NAME = 'phoenics'
-#_ALGORITHM_NAME = 'random_search'
+#_ALGORITHM_NAME = 'phoenics'
+_ALGORITHM_NAME = 'random_search'
 #_ALGORITHM_NAME = 'spearmint'
 #_ALGORITHM_NAME = 'smac'
 
@@ -44,11 +44,9 @@ _DEFAULT_SETTINGS = {'algorithm': {'name': _ALGORITHM_NAME,
 					 'feedback_database': {'path': _DB_FEEDBACK_PATH,
 					 					   'database_type': _DB_FEEDBACK_TYPE},
 
-#					 'communicator': {'type': 'auto'},
-					 'communicator': {'type': 'slack'},
+					 'communicator': {'type': 'slack', 'port': <<PORT>>, 'channel_id': <<CHANNEL_ID>>, 'bot_id': <<BOT_ID>>},
 
-
-					 'experiments': [{'name': 'experiment_name', 
+					 'experiments': [{'name': 'experiment', 
 					 				  'variables':  [{'name': 'param0', 'type': 'float', 'low': 0.0, 'high': 1.0, 'size': 1},
 					 				  			     {'name': 'param1', 'type': 'float', 'low': 0.0, 'high': 1.0, 'size': 1},
 												 	 {'name': 'param2', 'type': 'float', 'low': 0.0, 'high': 1.0, 'size': 1},
@@ -56,10 +54,9 @@ _DEFAULT_SETTINGS = {'algorithm': {'name': _ALGORITHM_NAME,
 												 	 {'name': 'param4', 'type': 'float', 'low': 0.0, 'high': 1.0, 'size': 1},
 												 	 {'name': 'param5', 'type': 'float', 'low': 0.0, 'high': 1.0, 'size': 1}],
 
-									  'objectives': [{'name': 'obj_0', 'operation': 'std_rel', 'hierarchy': 0, 'type': 'minimum', 'tolerance': 0.2},
-									  				 {'name': 'obj_0', 'operation': 'average', 'hierarchy': 1, 'type': 'maximum', 'tolerance': 0.5},
-									  				 {'name': 'obj_1', 'operation': 'average', 'hierarchy': 2, 'type': 'minimum', 'tolerance': 0.2},
-									  				 {'name': 'obj_2', 'operation': 'average', 'hierarchy': 3, 'type': 'minimum', 'tolerance': 0.5}],
+									  'objectives': [{'name': 'obj_0', 'operation': 'average', 'hierarchy': 0, 'type': 'minimum', 'tolerance': 0.2},
+									  				 {'name': 'obj_1', 'operation': 'average', 'hierarchy': 1, 'type': 'minimum', 'tolerance': 0.2},
+									  				 {'name': 'obj_2', 'operation': 'average', 'hierarchy': 2, 'type': 'minimum', 'tolerance': 0.5}],
 
 					 				  'repetitions': 3,
 									  'description': 'description of the experiment'}],

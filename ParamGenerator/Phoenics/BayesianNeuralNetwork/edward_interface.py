@@ -10,7 +10,7 @@ import edward as ed
 import numpy as np 
 
 from Utils.utils import VarDictParser 
-from BayesianNeuralNetwork.distributions import DiscreteLaplace
+#from BayesianNeuralNetwork.distributions import DiscreteLaplace
 
 #========================================================================
 

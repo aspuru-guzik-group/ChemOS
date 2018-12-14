@@ -11,7 +11,7 @@ import theano.tensor as T
 import pymc3 as pm 
 
 from Utils.utils import VarDictParser
-from BayesianNeuralNetwork.distributions import DiscreteLaplace
+#from BayesianNeuralNetwork.distributions import DiscreteLaplace
 
 #========================================================================
 

@@ -111,7 +111,7 @@ class BotManager(Printer):
 			job_id   = data['job_id']
 			bot_name = data['bot_name']
 			exp_name = data['exp_identifier']
-		except:
+		except AttributeError:
 			self._print('could not process file %s' % file_name)
 			return None
 

@@ -26,15 +26,26 @@ def inbound():
 	except KeyError:
 		return response, 200
 
+#	print('****************')
+#
+#	for key, value in event.items():
+#		print(key, '\t', value)
+#
+#	print('****************')
+
 	if event['type'] == 'message':
 		try:
 			if event['subtype'] in ['bot_message', 'message_deleted']:
+				return response, 200
+			if 'UDMUX420Y' in event['user']:
 				return response, 200
 		except KeyError:
 			pass
 
 		channel_id = event['channel']
-		if channel_id == 'C8YP312JD':
+#		print('Channel ID', channel_id)
+
+		if channel_id == 'CDQ3YC9DL':   #'C8YP312JD':
 			# save event to pickle file
 			file_name = 'new_command_%s.pkl' % str(uuid.uuid4())	
 			pickle.dump(event, open(file_name, 'wb'))
@@ -45,5 +56,5 @@ def inbound():
 
 if __name__ == '__main__':
 	
-	app.run(debug = True)
+	app.run(debug = True, port = 8000)
 
