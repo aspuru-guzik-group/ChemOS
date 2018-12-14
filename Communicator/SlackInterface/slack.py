@@ -4,6 +4,7 @@ __author__ = 'Florian Hase'
 
 #========================================================================
 
+import io
 import os, json, flask
 import pickle
 import subprocess
@@ -28,6 +29,10 @@ class SlackCommunicator(object):
 
 
 	def _send_message(self, channel_id, message, file_names = None):
+		
+		if isinstance(channel_id, dict):
+			channel_id = channel_id['contact']
+		
 		info = self.client.api_call('chat.postMessage', channel = channel_id, text = message, username = 'chemos', icon_emoji = ':robot_face:', as_user = False)
 		if isinstance(file_names, list):
 			for file_name in file_names:
